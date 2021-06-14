@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>index</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#000;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, width=800" />
+	<link href='https://fonts.googleapis.com/css?family=Quicksand:700&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Archivo&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Amita&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Aclonica&subset=latin' rel='stylesheet' type='text/css'>
+	
+	<script>
+	var PLAYER; 
+	var GOLDKEY;
+	var BLACKKEY;
+	var SWORD; 
+	var GRAIL; 
+	var PLAYERALIVE;
+	var GREENDRAGON;
+	var REDDRAGON;
+	var GOLDDRAGON;
+	var GREENDRAGONALIVE;
+	var REDDRAGONALIVE;
+	var GOLDDRAGONALIVE;
+	var SETLOOPLEFT;
+	var SETLOOPRIGHT;
+	var SETLOOPUP;
+	var SETLOOPDOWN;
+	var GATE1CLOSED;
+	var GATE2CLOSED;
+	var GRIDSYSTEM; 
+	var GRIDSYSTEM01;
+	var GRIDSYSTEM02;
+	var GRIDSYSTEM03;
+	var GRIDSYSTEM04;
+	var GRIDSYSTEM05;
+	var GRIDSYSTEM06;
+	var GRIDSYSTEM07;
+	var GRIDSYSTEM08;
+	var GRIDSYSTEM09;
+	var GRIDSYSTEM10;
+	var GRIDSYSTEM11;
+	var GRIDSYSTEM12;
+	var GRIDSYSTEM13;
+	var GRIDSYSTEM14;	
+	var GRIDSYSTEM15;
+	var GRIDSYSTEM16;
+	var INTERVALGOLDDRAGON;
+	var INTERVALGREENDRAGON;
+	var INTERVALREDDRAGON;
+	var MESSAGEINDEX;
+	var MESSAGE;
+	var GREENDRAGONRATE;  
+	var GOLDDRAGONRATE;   
+	var REDDRAGONRATE;
+	var SWORDACCURACY;    
+	var DRAGONDISTANCE;    
+	var PLAYERRATE;	
+	var EASTEREGG;
+	
+	var gblFogElement;		// A reference to the DOM element containing the fog mask
+	
+	var gblMusicFadeOutChaliceInterval;		// An interval that fades out the black-castle music
+	var gblMusicFadeInChaliceInterval;		// An interval that fades in the black-castle music
+	var gblMusicFadeOutVoidInterval;		// An interval that fades out the music in scene 15 upon leaving
+	var gblMusicFadeOutForestInterval;		// An interval that fades out the general forest music
+	var gblMusicFadeInForestInterval;		// An interval that fades in the general forest music
+	var gblMusicFadeOutDragonInterval;		// An interval that fades out the dragon theme
+	var gblMusicFadeOutThroneInterval;		// An interval that fades out the throne-room theme
+	var gblMusicFadeOutGoldInterval;		// An interval that fades out the gold-castle theme
+	
+	var gblForestCurrentTime;				// The current time when the forest music pauses and continues
+	var gblChaliceCurrentTime;				// The current time when the black-castle music pauses and continues
+	
+	var gblForestFadeIn; 	// Reference to a function that fades the forest music in until it reaches full volume.
+	var gblForestFadeOut; 	// Reference to a function fades out the forest music.
+	var gblChaliceFadeIn; 	// Reference to a function that fades the black-castle music in until it reaches full volume.
+	var gblChaliceFadeOut; 	// Reference to a function fades out the black-castle music.
+	
+	var gblChalicePromise;	// The Promise object for the black-castle music
+	var gblDragonPromise;	// The Promise object for the dragon music
+	
+	var gblFogOn = false;			// Whether or not there is fog in some areas
+	var gblMetWizard = false;		// Whether or not the player has spoken to the wizard yet
+	var gblDragonAnimateInterval;	// A reference to the interval that animates the dragon spritesheets
+		
+	</script>
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:800px;height:600px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?43428"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>EASY</div>
+		<div>HARD</div>
+		<div>Misadventure</div>
+		<div>PLAYER IS FASTER
+DRAGONS ARE SLOWER
+SWORD IS SHARPER</div>
+		<div>Gold Castle music</div>
+		<div>CREDITS</div>
+		<div>GAME OVER</div>
+		<div>Throne Room music</div>
+		<div>NEXT</div>
+		<div>HELLO</div>
+		<div>ADVENTURE</div>
+		<div> 
+ 
+ 
+Original Javascript
+Darren Pearson
+Student Modifications
+Jason Pape
+Original Game Designer
+Warren Robinett
+Special Thanks To
+Saint Paul College
+Bekkah, Benjamin, Lena, Orion, Régan
+ 
+ 
+DO COME AGAIN
+</div>
+		<div>PLAY AGAIN?</div>
+		<div>Void theme music</div>
+		<div>YOU FOUND THE
+SECRET ROOM!</div>
+		<div>— Alvin Stomach, author of Friend and Mentor: A Proprietary Tale</div>
+		<div>“That feeling you can't describe”</div>
+		<div>Mergers, Acquisitions & Games</div>
+		<div>Vippoid & Blech</div>
+		<div>Dragon attack music</div>
+		<div>Forest theme music</div>
+		<div>Chalice theme music</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
