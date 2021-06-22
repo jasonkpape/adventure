@@ -67,6 +67,10 @@
 	var INTERVALGOLDDRAGON;
 	var INTERVALGREENDRAGON;
 	var INTERVALREDDRAGON;
+	var INTERVALRIGHT;
+	var INTERVALLEFT;
+	var INTERVALUP;
+	var INTERVALDOWN;
 	var MESSAGEINDEX;
 	var MESSAGE;
 	var GREENDRAGONRATE;  
@@ -87,6 +91,7 @@
 	var gblMusicFadeOutDragonInterval;		// An interval that fades out the dragon theme
 	var gblMusicFadeOutThroneInterval;		// An interval that fades out the throne-room theme
 	var gblMusicFadeOutGoldInterval;		// An interval that fades out the gold-castle theme
+	var gblMusicFadeOutEndingInterval;		// An interval that fades out the ending music
 	
 	var gblForestCurrentTime;				// The current time when the forest music pauses and continues
 	var gblChaliceCurrentTime;				// The current time when the black-castle music pauses and continues
@@ -100,9 +105,23 @@
 	var gblDragonPromise;	// The Promise object for the dragon music
 	
 	var gblFogOn = false;			// Whether or not there is fog in some areas
-	var gblMetWizard = false;		// Whether or not the player has spoken to the wizard yet
 	var gblDragonAnimateInterval;	// A reference to the interval that animates the dragon spritesheets
-			
+	
+	var gblTypingMessage = false;	// Whether or not a dialogue message is currently being typed out
+	
+	var gblTypeMessage;				// A reference to function that types out dialogue letter by letter
+	var gblTypingInterval;			// A reference to the interval that types the letters
+	
+	var gblVoidVisited = false;		// Whether or not the player has visited the easter-egg void yet
+	var gblGameStarting = true;		// Whether or not the game is just starting (used to fade-in to scene 01 for only the first time)
+	var gblDifficultySet = false;	// Whether or not the player has clicked the EASY or HARD button on the splash screen
+	
+	var gblTeleporting = false;		// Whether or not the player is currently teleporting
+	var gblWatchedVideo = false;	// Whether or not the player has seen the easter-egg video during the current game
+	var gblEndingFadingOut = false;	// Whether or not the ending fade-out is occurring
+	var gblAnimateWizard;			// An interval used to animate the Tomato Wizard spritesheet in dialogue boxes
+	var gblAnimateTinyWizard;		// An interval used to animate the Tomato Wizard spritesheet in dialogue boxes
+	
 	</script>
 	
 
@@ -112,7 +131,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:800px;height:600px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?42103"></script>
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?93376"></script>
 	</div>
 
 	<!-- end copy -->
@@ -124,18 +143,23 @@
 	<div style="display:none" aria-hidden=true>
 
 		<div>EASY</div>
-		<div>HARD</div>
-		<div>Misadventure</div>
+		<div></div>
 		<div>PLAYER IS FASTER
 DRAGONS ARE SLOWER
 SWORD IS SHARPER
 LESS DARKNESS</div>
+		<div>Misadventure</div>
+		<div>HARD</div>
 		<div>Gold Castle music</div>
-		<div>GAME OVER</div>
 		<div>CREDITS</div>
+		<div>GAME OVER</div>
 		<div>Throne Room music</div>
 		<div>NEXT</div>
-		<div></div>
+		<div>Timpani roll</div>
+		<div>Ending Music</div>
+		<div>Teleporter sound</div>
+		<div>Credits music</div>
+		<div>PLAY AGAIN?</div>
 		<div> 
  
  
@@ -148,36 +172,40 @@ Music & Sound FX
 Jason Pape
 Playtesting
 Bekkah
-Playtester 2
+Rebecca
 Based on Adventure by
 Warren Robinett
 Special Thanks To
 Saint Paul College
 Bekkah
+Rebecca
 Benjamin
 Lena
 Orion
 Régan
-Playtester 2
  
  
 DO COME AGAIN!
 </div>
-		<div>PLAY AGAIN?</div>
 		<div>BUT CALL FIRST.</div>
 		<div>Void theme music</div>
-		<div>YOU FOUND THE
-SECRET ROOM!</div>
-		<div>— Erin Blaggles, composer of Threnody for a Lost Credit Card</div>
+		<div>You cannot understand the words of this mysterious
+being, but you are sure they must be important
+somehow.</div>
+		<div></div>
+		<div>Void fanfare music</div>
+		<div>— Malicia Blaggles, composer of Threnody for a Lost Credit Card</div>
 		<div>“The future is in your pocket”</div>
 		<div>Mergers, Acquisitions & Games</div>
 		<div>Vippoid & Blech</div>
+		<div>Forest theme music</div>
+		<div>portcullis sound effect</div>
+		<div>dragon-defeated music</div>
 		<div>dropItem sound effect</div>
 		<div>Dragon attack music</div>
-		<div>portcullis sound effect</div>
+		<div>player-lose music</div>
 		<div>pickUp sound effect</div>
 		<div>Chalice theme music</div>
-		<div>Forest theme music</div>
 		<div>Play Credits
 
 </div>
