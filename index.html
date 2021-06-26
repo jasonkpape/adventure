@@ -130,6 +130,16 @@
 	
 	var gblRainbowFenceActivated;	// Whether or not the player can pass over the fence to the easter-egg room
 	
+	var gblGateHintGiven;			// Whether or not the game has told the player that a key is needed to open the gate to the gold castle
+	var gblItemHintGiven;			// Whether or not the game has explained how picking up and dropping items works
+	var gblPositionHintGiven;		// Whether or not the game has explained that the key must be held in the right position to open the gate
+	var gblBlackCastleHintGiven;	// Whether or not the game has explained that the gold key does not work on the black castle
+	var gblRedGateHintGiven;		// Whether or not the game has explained that the red gate is locked
+	
+	var gblEasterEggMessageShown;	// Whether or not a message concerning the easter egg's effect in scene 04 has been shown
+	var gblTeleporterMessageShown;	// Whether or not a message about the teleporter has been shown
+	
+	var gblChaseDistance;			// The radius of the circular area where the player is vulnerable after the Ducklords take an attack pose.
 	</script>
 	
 
@@ -139,7 +149,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:800px;height:600px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?44287"></script>
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?81301"></script>
 	</div>
 
 	<!-- end copy -->
@@ -158,20 +168,17 @@ SWORD IS SHARPER
 LESS DARKNESS</div>
 		<div>Misadventure</div>
 		<div>HARD</div>
-		<div>Gold Castle music</div>
-		<div>DONE</div>
 		<div>You cannot understand the words of this mysterious
 being, but you are sure they must be important
 somehow.</div>
-		<div>GAME OVER</div>
+		<div>DONE</div>
+		<div>Gold Castle music</div>
 		<div>NEXT</div>
 		<div>Timpani roll</div>
 		<div>Ending Music</div>
 		<div>CREDITS</div>
 		<div>Throne Room music</div>
 		<div>Teleporter sound</div>
-		<div>Credits music</div>
-		<div>PLAY AGAIN?</div>
 		<div> 
  
  
@@ -199,16 +206,18 @@ Régan
  
 DO COME AGAIN!
 </div>
+		<div>PLAY AGAIN?</div>
 		<div>BUT CALL FIRST.</div>
+		<div>Credits music</div>
 		<div>Void theme music</div>
-		<div></div>
 		<div>Void fanfare music</div>
+		<div></div>
 		<div>— Malicia Blaggles, composer of Threnody for a Lost Credit Card</div>
 		<div>“The future is in your pocket”</div>
 		<div>Mergers, Acquisitions & Games</div>
 		<div>Vippoid & Blech</div>
 		<div>Ducklord hiss sound</div>
-		<div>Ducklord swoop sound</div>
+		<div>Chalice theme music</div>
 		<div>Forest theme music</div>
 		<div>portcullis sound effect</div>
 		<div>dragon-defeated music</div>
@@ -216,7 +225,7 @@ DO COME AGAIN!
 		<div>Dragon attack music</div>
 		<div>player-lose music</div>
 		<div>pickUp sound effect</div>
-		<div>Chalice theme music</div>
+		<div>Ducklord swoop sound</div>
 		<div>Scene03
 
 </div>
